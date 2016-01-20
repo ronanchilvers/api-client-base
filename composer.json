@@ -1,0 +1,16 @@
+{
+    "name": "ronanchilvers/api-client-base",
+    "description": "Utility library to aid creating integrations with HTTP based APIs",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^4.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ronan Chilvers",
+            "email": "ronan@d3r.com"
+        }
+    ],
+    "require": {}
+}
