@@ -18,7 +18,7 @@ class ExceptionResponse extends Response implements ExceptionResponseInterface
     /**
      * @author Ronan Chilvers <ronan@d3r.com>
      */
-    public function getException(ApiException $exception)
+    public function getException()
     {
         return $this->exception;
     }
@@ -26,11 +26,11 @@ class ExceptionResponse extends Response implements ExceptionResponseInterface
     /**
      * Set the exception object
      *
-     * @param  Ronanchilvers\ApiClientBase\ApiException $exception
+     * @param  \Exception $exception
      * @return $this
      * @author Ronan Chilvers <ronan@d3r.com>
      */
-    public function setException(ApiException $exception)
+    public function setException(\Exception $exception)
     {
         $this->exception = $exception;
 
