@@ -2,6 +2,7 @@
 
 namespace Ronanchilvers\ApiClientBase;
 
+use GuzzleHttp\Message\ResponseInterface as GuzzleResponseInterface;
 use Ronanchilvers\ApiClientBase\Contract\ResponseInterface;
 
 class Response implements ResponseInterface
@@ -12,6 +13,16 @@ class Response implements ResponseInterface
      * @var GuzzleHttp\Message\Response
      */
     private $guzzleResponse;
+
+    /**
+     * Class constructor
+     *
+     * @author Ronan Chilvers <ronan@d3r.com>
+     */
+    public function __construct(GuzzleResponseInterface $response)
+    {
+        $this->guzzleResponse = $response;
+    }
 
     /**
      * @author Ronan Chilvers <ronan@d3r.com>
