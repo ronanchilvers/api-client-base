@@ -9,5 +9,19 @@ namespace Ronanchilvers\ApiClientBase\Contract;
  */
 interface ResponseInterface
 {
-    
+    /**
+     * Get the guzzle response
+     *
+     * @return GuzzleHttp\Message\ResponseInterface
+     * @author Ronan Chilvers <ronan@d3r.com>
+     */
+    public function getGuzzleResponse();
+
+    /**
+     * Get the data payload for this response
+     *
+     * @return mixed
+     * @author Ronan Chilvers <ronan@d3r.com>
+     */
+    public function getBody();
 }

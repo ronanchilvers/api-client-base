@@ -3,6 +3,7 @@
 namespace Ronanchilvers\ApiClientBase\Contract;
 
 use GuzzleHttp\ClientInterface as GuzzleClientInterface;
+use Ronanchilvers\ApiClientBase\Contract\CredentialsInterface;
 use Ronanchilvers\ApiClientBase\Contract\RequestInterface;
 
 /**
@@ -20,6 +21,15 @@ interface ClientInterface
      * @author  Ronan Chilvers <ronan@d3r.com>
      */
     public function setHttpClient(GuzzleClientInterface $httpClient);
+
+    /**
+     * Set the credentials for this client
+     *
+     * @param  Ronanchilvers\ApiClientBase\Contract\CredentialsInterface $credentials
+     * @return $this
+     * @author Ronan Chilvers <ronan@d3r.com>
+     */
+    public function setCredentials(CredentialsInterface $credentials);
 
     /**
      * Submit a request to the API
