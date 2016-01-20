@@ -35,6 +35,20 @@ class Request implements RequestInterface
     private $params;
 
     /**
+     * Set the verb for this request
+     *
+     * @param string $value
+     * @return $this
+     * @author Ronan Chilvers <ronan@d3r.com>
+     */
+    public function setVerb($value)
+    {
+        $this->verb = $value;
+
+        return $this;
+    }
+
+    /**
      * @author Ronan Chilvers <ronan@d3r.com>
      */
     public function getVerb()
@@ -63,6 +77,20 @@ class Request implements RequestInterface
     public function getHeaders()
     {
         return $this->headers;
+    }
+
+    /**
+     * Set the path for this request
+     *
+     * @param  string $value
+     * @return $this
+     * @author Ronan Chilvers <ronan@d3r.com>
+     */
+    public function setPath($value)
+    {
+        $this->path = $value;
+
+        return $this;
     }
 
     /**
