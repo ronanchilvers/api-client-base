@@ -24,4 +24,12 @@ interface ResponseInterface
      * @author Ronan Chilvers <ronan@d3r.com>
      */
     public function getBody();
+
+    /**
+     * Get the body as a json object
+     *
+     * @return string
+     * @author Ronan Chilvers <ronan@d3r.com>
+     */
+    public function json();
 }

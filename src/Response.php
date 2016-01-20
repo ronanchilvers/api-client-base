@@ -43,4 +43,12 @@ class Response implements ResponseInterface
             return false;
         }
     }
+
+    /**
+     * @author Ronan Chilvers <ronan@d3r.com>
+     */
+    public function json()
+    {
+        return $this->getGuzzleResponse()->json();
+    }
 }
