@@ -4,6 +4,7 @@ namespace Ronanchilvers\ApiClientBase;
 
 use GuzzleHttp\ClientInterface as GuzzleClientInterface;
 use Ronanchilvers\ApiClientBase\Contract\ClientInterface;
+use Ronanchilvers\ApiClientBase\Contract\CredentialsInterface;
 use Ronanchilvers\ApiClientBase\ExceptionResponse;
 use Ronanchilvers\ApiClientBase\Response;
 
@@ -22,6 +23,19 @@ class Client implements ClientInterface
      * @var GuzzleHttp\ClientInterface
      */
     private $httpClient;
+
+    /**
+     * Class constructor
+     *
+     * @author Ronan Chilvers <ronan@d3r.com>
+     */
+    public function __construct(
+        CredentialsInterface $credentials,
+        GuzzleClientInterface $httpClient
+    ) {
+        $this->setCredentials($credentials);
+        $this->setHttpClient($httpClient); 
+    }
 
     /**
      * @author Ronan Chilvers <ronan@d3r.com>
