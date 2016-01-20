@@ -2,6 +2,8 @@
 
 namespace Ronanchilvers\ApiClientBase;
 
+use Ronanchilvers\ApiClientBase\Contract\CredentialsInterface;
+
 /**
  * Standard credentials object
  * 
