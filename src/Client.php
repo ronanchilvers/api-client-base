@@ -75,6 +75,8 @@ class Client implements ClientInterface
             if (false !== $body = $request->getBody()){
                 $key = ($request instanceof JsonRequest) ? 'json' : 'body';
                 $requestOptions[$key] = $body;
+            } else {
+                $requestOptions['query'] = $request->getParams();
             }
             $guzzleRequest = $client->createRequest(
                 $request->getVerb(),
