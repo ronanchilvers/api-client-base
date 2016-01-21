@@ -7,6 +7,6 @@ namespace Ronanchilvers\ApiClientBase;
  * 
  * @author Ronan Chilvers <ronan@d3r.com>
  */
-class ApiException extends Exception
+class ApiException extends \Exception
 {
 }
