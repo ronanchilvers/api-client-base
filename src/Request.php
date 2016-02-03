@@ -32,7 +32,7 @@ class Request implements RequestInterface
      * 
      * @var string[]
      */
-    private $params;
+    private $params = [];
 
     /**
      * Set the verb for this request
